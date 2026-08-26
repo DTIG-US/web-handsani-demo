@@ -9,6 +9,6 @@ import * as siteData from '../../data.json';
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.css']
 })
-export class demoComponent {
+export class DemoComponent {
   data: any = (siteData as any).default;
 }
