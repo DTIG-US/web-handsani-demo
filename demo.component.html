@@ -1,0 +1,19 @@
+<section class="offerings-section" aria-label="Product Offerings">
+  <div class="offerings-stack">
+    @for (item of data.offerings; track item.id; let i = $index) {
+      <div class="demo-row" [class.demo-row--reversed]="i % 2 !== 0">
+        <div class="demo-image-col">
+          <img [src]="item.image"
+               [alt]="item.title"
+               class="demo-img" />
+        </div>
+        <div class="demo-text-col">
+          <span class="demo-label">{{ item.id }}</span>
+          <h3 class="demo-title">{{ item.title }}</h3>
+          <div class="demo-accent" aria-hidden="true"></div>
+          <p class="demo-desc">{{ item.description }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</section>

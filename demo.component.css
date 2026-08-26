@@ -1,0 +1,178 @@
+:host {
+  /* demo Component Tokens & Defaults */
+  --ih-demo-row-height: 260px;
+  --ih-demo-row-bg: rgba(255, 255, 255, 0.02);
+  --ih-demo-row-bg-hover: rgba(255, 255, 255, 0.05);
+  --ih-demo-row-border: rgba(125, 249, 255, 0.12);
+
+  /* Image Column */
+  --ih-demo-image-bg: rgba(255, 255, 255, 0.03);
+  --ih-demo-image-bg-rev: rgba(255, 255, 255, 0.02);
+  --ih-demo-image-border: rgba(125, 249, 255, 0.08);
+
+  /* Text Column & Typography */
+  --ih-demo-panel-bg: var(--ih-color-surface-dark, rgba(10, 15, 44, 0.65));
+  --ih-demo-panel-blur: var(--ih-blur-glass, 14px);
+  --ih-demo-label-font: var(--ih-font-sans, 'Inter', Helvetica, sans-serif);
+  --ih-demo-label-color: var(--ih-color-accent, #7df9ff);
+  --ih-demo-title-font: var(--ih-font-heading, 'Outfit', 'Inter', Helvetica, sans-serif);
+  --ih-demo-title-color: var(--ih-color-text-primary, #ffffff);
+  --ih-demo-accent-bar-bg: var(--ih-gradient-accent-h, linear-gradient(90deg, #7df9ff, #00c8d4));
+  --ih-demo-desc-font: var(--ih-font-sans, 'Inter', Helvetica, sans-serif);
+  --ih-demo-desc-color: var(--ih-color-text-secondary, rgba(200, 220, 255, 0.8));
+}
+
+/* ─── demos Section ───────────────────────────────── */
+.demos-section {
+  padding: 0;
+  position: relative;
+}
+
+/* ─── demo Stack ─────────────────────────────────── */
+.demos-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── demo Row ───────────────────────────────────── */
+.demo-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: var(--ih-demo-row-height);
+  border-top: 1px solid var(--ih-demo-row-border);
+  background: var(--ih-demo-row-bg);
+  transition: background 0.3s ease;
+  overflow: hidden;
+}
+
+.demo-row:last-child {
+  border-bottom: 1px solid var(--ih-demo-row-border);
+}
+
+.demo-row:hover {
+  background: var(--ih-demo-row-bg-hover);
+}
+
+/* ─── Reversed Row (image on right) ──────────────────── */
+.demo-row--reversed {
+  flex-direction: row-reverse;
+}
+
+@media (min-width: 768px) {
+  .demo-row--reversed .demo-text-col {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+/* ─── Image Column ───────────────────────────────────── */
+.demo-image-col {
+  flex: 0 0 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--ih-demo-image-bg);
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid var(--ih-demo-image-border);
+}
+
+.demo-row--reversed .demo-image-col {
+  background: var(--ih-demo-image-bg-rev);
+  border-right: none;
+  border-left: 1px solid var(--ih-demo-image-border);
+}
+
+/* ─── demo Image ─────────────────────────────────── */
+.demo-img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.3s ease;
+  opacity: 0.85;
+}
+
+.demo-row:hover .demo-img {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/* ─── Text Column ────────────────────────────────────── */
+.demo-text-col {
+  flex: 1 1 67%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.25rem 4rem;
+  background: var(--ih-demo-panel-bg);
+  backdrop-filter: blur(var(--ih-demo-panel-blur)) saturate(1.4);
+  -webkit-backdrop-filter: blur(var(--ih-demo-panel-blur)) saturate(1.4);
+}
+
+/* ─── demo Label (ID badge) ──────────────────────── */
+.demo-label {
+  font-family: var(--ih-demo-label-font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ih-demo-label-color);
+  margin-bottom: 0.5rem;
+}
+
+/* ─── demo Title ─────────────────────────────────── */
+.demo-title {
+  font-family: var(--ih-demo-title-font);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--ih-demo-title-color);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* ─── demo Accent ────────────────────────────────── */
+.demo-accent {
+  width: 40px;
+  height: 2px;
+  background: var(--ih-demo-accent-bar-bg);
+  border-radius: 2px;
+}
+
+/* ─── demo Description ───────────────────────────── */
+.demo-desc {
+  font-family: var(--ih-demo-desc-font);
+  font-size: 0.95rem;
+  color: var(--ih-demo-desc-color);
+  line-height: 1.7;
+  margin: 1rem 0 0 0;
+  max-width: 600px;
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 767.98px) {
+  .demo-row,
+  .demo-row--reversed {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+  }
+
+  .demo-image-col {
+    flex: 0 0 auto;
+    min-height: 200px;
+  }
+
+  .demo-text-col {
+    padding: 2rem 1.5rem;
+  }
+
+  .demo-title {
+    font-size: 1.35rem;
+  }
+}
+
