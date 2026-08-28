@@ -6,15 +6,24 @@
 }
 
 .results-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--ih-results-bg, rgba(255, 255, 255, 0.05));
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border-radius: 24px;
   padding: 40px;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--ih-results-border, rgba(255, 255, 255, 0.1));
   animation: fadeScaleUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: var(--ih-results-text, inherit);
+}
+
+.results-card a {
+  color: var(--ih-results-link, inherit);
+}
+
+.results-card a:hover {
+  color: var(--ih-results-link-hover, inherit);
 }
 
 @keyframes fadeScaleUp {

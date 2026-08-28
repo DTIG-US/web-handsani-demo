@@ -2,9 +2,9 @@
   width: 80%;
   max-width: 600px;
   margin: 0 auto;
-  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border: 2px dashed var(--ih-upload-border, rgba(255, 255, 255, 0.2));
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--ih-upload-bg, rgba(255, 255, 255, 0.03));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all 0.3s ease;
@@ -12,6 +12,15 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  color: var(--ih-upload-text, inherit);
+}
+
+.upload-container a {
+  color: var(--ih-upload-link, inherit);
+}
+
+.upload-container a:hover {
+  color: var(--ih-upload-link-hover, inherit);
 }
 
 .upload-container::before {
