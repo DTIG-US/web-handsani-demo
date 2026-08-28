@@ -1,6 +1,6 @@
 :host {
   /* demo Component Tokens & Defaults */
-  --ih-demo-row-height: 260px;
+  --ih-demo-row-height: 160px;
   --ih-demo-row-bg: rgba(255, 255, 255, 0.02);
   --ih-demo-row-bg-hover: rgba(255, 255, 255, 0.05);
   --ih-demo-row-border: rgba(125, 249, 255, 0.12);
@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  height: var(--ih-demo-row-height);
+  min-height: var(--ih-demo-row-height);
   border-top: 1px solid var(--ih-demo-row-border);
   background: var(--ih-demo-row-bg);
   transition: background 0.3s ease;
@@ -61,18 +61,18 @@
 
 @media (min-width: 768px) {
   .demo-row--reversed .demo-text-col {
-    align-items: flex-end;
-    text-align: right;
+    align-items: flex-start;
+    text-align: left;
   }
 }
 
 /* ─── Image Column ───────────────────────────────────── */
 .demo-image-col {
-  flex: 0 0 33%;
+  flex: 0 0 28%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 0.5rem;
   background: var(--ih-demo-image-bg);
   position: relative;
   overflow: hidden;
@@ -102,11 +102,11 @@
 
 /* ─── Text Column ────────────────────────────────────── */
 .demo-text-col {
-  flex: 1 1 67%;
+  flex: 1 1 72%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2.25rem 4rem;
+  padding: 1.5rem 2.5rem;
   background: var(--ih-demo-panel-bg);
   backdrop-filter: blur(var(--ih-demo-panel-blur)) saturate(1.4);
   -webkit-backdrop-filter: blur(var(--ih-demo-panel-blur)) saturate(1.4);
@@ -115,7 +115,7 @@
 /* ─── demo Label (ID badge) ──────────────────────── */
 .demo-label {
   font-family: var(--ih-demo-label-font);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -126,7 +126,7 @@
 /* ─── demo Title ─────────────────────────────────── */
 .demo-title {
   font-family: var(--ih-demo-title-font);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--ih-demo-title-color);
   letter-spacing: -0.01em;
@@ -146,11 +146,11 @@
 /* ─── demo Description ───────────────────────────── */
 .demo-desc {
   font-family: var(--ih-demo-desc-font);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--ih-demo-desc-color);
   line-height: 1.7;
   margin: 1rem 0 0 0;
-  max-width: 600px;
+  max-width: none;
 }
 
 /* ─── Responsive ─────────────────────────────────────── */

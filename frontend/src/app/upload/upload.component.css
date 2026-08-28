@@ -1,5 +1,5 @@
 .upload-container {
-  width: 100%;
+  width: 80%;
   max-width: 600px;
   margin: 0 auto;
   border: 2px dashed rgba(255, 255, 255, 0.2);
@@ -8,7 +8,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all 0.3s ease;
-  padding: 48px 32px;
+  padding: 20px 16px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -42,7 +42,7 @@
 
 .upload-icon {
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -52,22 +52,22 @@
 }
 
 .upload-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #ffffff;
   margin: 0 0 8px 0;
 }
 
 .upload-subtitle {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.5);
-  margin: 0 0 32px 0;
+  margin: 0 0 16px 0;
 }
 
 .upload-divider {
   width: 100%;
   position: relative;
-  margin: 24px 0;
+  margin: 16px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,9 +92,9 @@
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   color: #ffffff;
   border: none;
-  padding: 14px 32px;
+  padding: 10px 24px;
   border-radius: 30px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
