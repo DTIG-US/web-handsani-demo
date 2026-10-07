@@ -1,8 +1,8 @@
 import { Component, signal, inject } from '@angular/core';
 import { HttpEventType } from '@angular/common/http';
-import { UploadComponent } from './frontend/src/app/upload/upload.component';
-import { ResultsComponent } from './frontend/src/app/results/results.component';
-import { ApiService, InferenceResult } from './frontend/src/app/services/api.service';
+import { UploadComponent } from './components/upload/upload.component';
+import { ResultsComponent } from './components/results/results.component';
+import { ApiService, InferenceResult } from './services/api.service';
 
 @Component({
   selector: 'app-demo',

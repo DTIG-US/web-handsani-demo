@@ -1,11 +1,10 @@
 import { Component, input, output, computed } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { InferenceResult } from '../services/api.service';
+import { DecimalPipe } from '@angular/common';
+import { InferenceResult } from '../../services/api.service';
 
 @Component({
   selector: 'app-results',
-  standalone: true,
-  imports: [CommonModule],
+  imports: [DecimalPipe],
   template: `
     <div class="results-container">
       <div class="results-card" [class.success]="isSuccess()" [class.failure]="!isSuccess()">
@@ -41,7 +40,7 @@ import { InferenceResult } from '../services/api.service';
       </div>
     </div>
   `,
-  styleUrls: ['./results.component.css']
+  styleUrl: './results.component.css'
 })
 export class ResultsComponent {
   result = input.required<InferenceResult>();

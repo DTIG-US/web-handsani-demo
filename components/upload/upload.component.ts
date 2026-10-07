@@ -1,10 +1,7 @@
 import { Component, output, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-upload',
-  standalone: true,
-  imports: [CommonModule],
   template: `
     <div 
       class="upload-container" 
@@ -46,7 +43,7 @@ import { CommonModule } from '@angular/common';
       </div>
     </div>
   `,
-  styleUrls: ['./upload.component.css']
+  styleUrl: './upload.component.css'
 })
 export class UploadComponent {
   isDragging = signal(false);
