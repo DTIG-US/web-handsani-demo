@@ -1,8 +1,8 @@
 .upload-container {
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
-  border: 2px dashed var(--ih-upload-border, rgba(255, 255, 255, 0.2));
+  width: 60%;
+  max-width: 400px;
+  margin: 1.25rem auto;
+  border: 2px dashed var(--ih-upload-border, rgba(0, 242, 254, 0.05));
   border-radius: 24px;
   background: var(--ih-upload-bg, rgba(255, 255, 255, 0.03));
   backdrop-filter: blur(10px);
@@ -30,7 +30,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
   border-radius: 24px;
   pointer-events: none;
 }
@@ -62,8 +62,8 @@
 
 .upload-title {
   font-size: 1.2rem;
-  font-weight: 600;
-  color: #ffffff;
+  font-weight: 800;
+  color: rgba(10, 15, 44, 0.55);
   margin: 0 0 8px 0;
 }
 
@@ -134,6 +134,13 @@
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
