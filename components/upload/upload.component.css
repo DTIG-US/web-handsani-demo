@@ -1,5 +1,5 @@
 .upload-container {
-  width: 60%;
+  width: 70%;
   max-width: 400px;
   margin: 1.25rem auto;
   border: 2px dashed var(--ih-upload-border, rgba(0, 242, 254, 0.05));
@@ -8,7 +8,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all 0.3s ease;
-  padding: 20px 16px;
+  padding: 10px 8px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -70,13 +70,13 @@
 .upload-subtitle {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.5);
-  margin: 0 0 16px 0;
+  margin: 0 0 8px 0;
 }
 
 .upload-divider {
   width: 100%;
   position: relative;
-  margin: 16px 0;
+  margin: 8px 0;
   display: flex;
   align-items: center;
   justify-content: center;
